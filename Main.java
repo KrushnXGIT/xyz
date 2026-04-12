@@ -1,24 +1,24 @@
 //Interface
 
 interface i1{
-    private void regularCode(){
+    private static void helper(){
         System.out.println("skjfhds");
     }
-    default void msg1(){
-        regularCode();
+    static void msg1(){
+        helper();
         System.out.println("fdkgvkrjk");
-        regularCode();
+        helper();
     }
-    default void msg2(){
-        regularCode();
+    static void msg2(){
+        helper();
         System.out.println("kjdfhjdh");
     }
 }
 
 class caller implements i1{
     public static void main(String[] args) {
-        caller c1 = new caller();
-        c1.msg1();
-        c1.msg2();
+
+        i1.msg1();
+        i1.msg2();
     }
 }
