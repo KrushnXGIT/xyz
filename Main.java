@@ -1,18 +1,109 @@
-//Wrapper classes
-
+/*
+//this and super
+class A{
+    int a = 0;
+    int b = 0;
+    void acceptdata(int a,int b){
+        a=a;
+        b=b;
+    }
+}
 class Caller{
 
     public static void main(String[] args) {
-        Integer a=44;
-        Integer b=44;
-        System.out.println(a==b);       //false
-        System.out.println(a.equals(b));//true
+        A f= new A();
+        f.acceptdata(23,45);
+        System.out.println(A.a);
+        //this();
+        //super.x;
+    }
+}*/
+/*
+class Student{
+    {
+        //initialisation block ran 1st
+    }
+    Student(){
+        //constructor ran 3rd
+    }
+    {
+        //initialisation block ran 2nd
+    }
+}
+*/
 
-        //exception returns true for -128 to 127
-        Integer a1=127;
-        Integer b1=127;
-        System.out.println(a1==b1);     //true
-        //chemistry jaisa exception agya be!
+//instance initialisation block
+//static initialisation block runs only once when first object is created
+/*
+//something different here see
+//this is running why?
+class Student{
+    static{
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
 
     }
 }
+*/
+
+class A{
+    {
+        System.out.println("Init A called");
+    }
+    A(){
+        this(1);
+    }
+    A(int x){
+        System.out.println("PARA A CALLED");
+    }
+}
+
+class B extends A{
+    {
+
+    }
+    B(){
+        System.out.println("B constructor called");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
