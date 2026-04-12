@@ -1,6 +1,13 @@
-//INTERFACE
+//Interface
 
-interface Ex {
-    int x = 5;  //by default set to public static final int x =5;
-    void fun(); //by default set to public abstract void fun();
+interface i1{
+    static void msg(){
+        System.out.println("dslkfsk");
+    }
+}
+
+class Caller{
+    public static void main(String[] args) {
+        i1.msg();
+    }
 }
