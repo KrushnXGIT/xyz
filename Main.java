@@ -1,49 +1,24 @@
-//INTERFACE
-/*
-class Ex{
-    void fun(){
-        System.out.println("Hello .. Students are good");
-    }
-}
+//Interface
 
 interface i1{
-    void fun1();
-}
-
-class Caller extends Ex implements i1{
-    public void fun1(){
-
+    private void regularCode(){
+        System.out.println("skjfhds");
     }
-}*/
-
-interface i1{
-    default void fun(){
-        System.out.println("slckslk");
+    default void msg1(){
+        regularCode();
+        System.out.println("fdkgvkrjk");
+        regularCode();
     }
-    void fun1();
-    void fun2();
+    default void msg2(){
+        regularCode();
+        System.out.println("kjdfhjdh");
+    }
 }
 
 class caller implements i1{
-    public void fun1(){
-
-    }
-    public void fun2(){
-
+    public static void main(String[] args) {
+        caller c1 = new caller();
+        c1.msg1();
+        c1.msg2();
     }
 }
-
-public static void main(String[] args) {
-
-}
-
-
-
-
-
-
-
-
-
-
-
