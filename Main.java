@@ -1,24 +1,25 @@
-//Interface
-
-interface i1{
-    private static void helper(){
-        System.out.println("skjfhds");
-    }
-    static void msg1(){
-        helper();
-        System.out.println("fdkgvkrjk");
-        helper();
-    }
-    static void msg2(){
-        helper();
-        System.out.println("kjdfhjdh");
+interface I1{
+    default void show(){
+        System.out.println("One");
     }
 }
 
-class caller implements i1{
+interface I2{
+    default void show(){
+        System.out.println("Two");
+    }
+}
+
+class Caller implements I1,I2{
+    public void show(){
+        I1.super.show();
+    }
+
     public static void main(String[] args) {
 
-        i1.msg1();
-        i1.msg2();
     }
 }
+
+/** Interface Diamond Problem--*
+ * When two methods come and compiler dont know which to call then we use I1.super.show();
+ */
