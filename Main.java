@@ -1,23 +1,39 @@
 //Wrapper classes
 
 class Caller{
-    static int myNumber(String s){
-        int ans =0;
-        for(int i=0;i<s.length();i++){
-            int n= s.codePointAt(i)-48;
-            ans=ans*10+n;
-        }
-        return ans;
-    }
-    public static void main(String[] args) {
-        //Convert String to Int
-        String s1="123",s2="5";
-        int ans=myNumber(s1)+myNumber(s2);
-        System.out.println(ans);
 
-        //instead of all this we can
-        Integer a= Integer.valueOf(s1) + Integer.valueOf(s2);
-        System.out.println(a);
+    public static void main(String[] args) {
+        //parseXxx()
+        String s1 = "123";
+        int a=Integer.parseInt(s1);
+        System.out.println(s1);
+
+        //toString()
+        Integer b=10;
+
+        String s=b+"";
+        System.out.println(s);
+
+        //instead of this
+        String s2= b.toString();
+        System.out.println(s2);
+
+        //hashCode()
+        Integer k = 100;
+        System.out.println(k.hashCode()); //returns same here but it will be used in hashMap
+        String kj ="hii";
+        String kq = "hii";
+        System.out.println(kj.hashCode());
+        System.out.println(kq.hashCode()); //here it will return same hashcode this is the usecase
+
+        //class Specific important methods
+        Integer.parseInt("123");
+        System.out.println(Integer.toBinaryString(13));
+        System.out.println(Integer.toHexString(13));
+        System.out.println(Integer.max(13,21));
+        System.out.println(Integer.min(13,21));
+        System.out.println(Integer.sum(23,31));
+        System.out.println(Integer.parseInt("1110101",2));
 
     }
 }
