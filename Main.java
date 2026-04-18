@@ -1,29 +1,19 @@
 //problem
 
+
+import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.concurrent.LinkedBlockingDeque;
 
 class call{
     public static void main(String[] args) {
-        LinkedList<Integer> ll = new LinkedList<Integer>();
-        ll.add(10);
-        ll.add(11);
-        ll.add(8);
-        ll.add(7);
-        ll.add(5);
-        ll.add(1);
-        System.out.println(ll);
+        LinkedList<String> ll1 = new LinkedList<String>(Arrays.asList("TIGER","CAT","DOG","HORSE"));
+        LinkedList<String> ll2 = new LinkedList<String>(Arrays.asList("CAT","HORSE","MONKEY","LION"));
 
-//        for(int i=0;i<ll.size();i++){
-//            int it = ll.get(i);
-//            if(it%2==0){
-//                System.out.println("Even " +it );
-//            }
-//            else {
-//                System.out.println("Odd "+it);
-//            }
-//        }
-        ll.removeIf(x->x%2==0);
-        System.out.println(ll);
-
+        System.out.println(ll1);
+        System.out.println(ll2);
+        ll1.removeAll(ll2); //<IMPORTANT>//
+        System.out.println(ll1);
+        System.out.println(ll2);
     }
 }
