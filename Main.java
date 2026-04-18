@@ -1,10 +1,31 @@
-//Object class String class
+//Collection FRAMEWORKS
+//ArrayList
 
-class Stirng1{
+import java.util.ArrayList;
+import java.util.Iterator;
+
+class call{
     public static void main(String[] args) {
-        StringBuffer sb1 = new StringBuffer("pratap");
-        StringBuffer sb2 = new StringBuffer("pratap");
-        System.out.println(sb1==sb2);
-        System.out.println(sb1.equals(sb2)); //this calls Object class .equals because it doesnt override
+        ArrayList al = new ArrayList();//<> not used here
+        al.add("Krushna");
+        al.add("Krushna");
+        al.add(10);
+        al.add(20.50);
+        al.add(20.3f);
+        al.add(null);
+        System.out.println(al);
+        System.out.println("Normal Looping");
+        for(int i=0;i<al.size();i++){
+            System.out.println(al.get(i));
+        }
+        System.out.println("FOR--EACH");
+        for(Object o:al){
+            System.out.println(o);
+        }
+        System.out.println("Iterator");
+        Iterator<Object> newIt = al.iterator();
+        while(newIt.hasNext()){
+            System.out.println(newIt.next());
+        }
     }
 }
