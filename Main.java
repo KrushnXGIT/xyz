@@ -1,28 +1,24 @@
 //Collection FRAMEWORKS
-//Stack
+//HashSet
+//LinkedHashSet just changed HashSet <->LinkedHashSet
 
 
-import java.util.Iterator;
-import java.util.Stack;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 
-class call {
+class call{
     public static void main(String[] args) {
-        Stack s = new Stack();
-        s.push("Hllo");
-        s.push("JiraMasala");
-        s.push("Krushna");
-        System.out.println(s.peek());
-        System.out.println(s);
-        for(int i=0;i<s.size();i++){
-            System.out.println(s.get(i));
+        LinkedHashSet hs = new LinkedHashSet();
+        hs.add("jello");
+        hs.add("helo");
+        hs.add(10);
+        hs.add(10.21);
+        hs.add(12.32f);
+        hs.add(null);
+        System.out.println(hs);
+        for(int i=0;i<hs.size();i++){
+           // System.out.println(hs.get(i));//this is problem here
         }
-        for(Object o:s){
-            System.out.println(o);
-        }
-        Iterator it = s.iterator();
-        while(it.hasNext()){
-            System.out.println(it.next());
-        }
-
     }
 }
