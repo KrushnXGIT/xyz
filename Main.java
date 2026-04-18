@@ -1,30 +1,27 @@
-//METHOD OVERLOADING
-
-class Animal{
-
-}
-class Monkey extends Animal{
-
-}
-class Test {
-    public void m1(Animal a){
-        System.out.println("animal");
+//Overriding
+class Parent{
+    public void property(){
+        System.out.println("Property");
     }
-
-    public void m1(Monkey m){
-        System.out.println("monkey");
+    public void marriage(){
+        System.out.println("Priyanka");
     }
+}
 
+class MyChoice extends Parent{
+    //Simple Overriding
+    public void marriage(){
+        System.out.println("Katrina");
+    }
+}
+
+class Main{
     public static void main(String[] args) {
-        Test t = new Test();
-        Animal a = new Animal();
-        t.m1(a);
-        Monkey m = new Monkey();
-        t.m1(m);
-        Animal a1 = new Monkey();
-        t.m1(a1);
+        Parent p = new Parent();
+        p.marriage();
+        MyChoice m = new MyChoice();
+        m.marriage();
+        Parent p1 = new MyChoice();
+        p1.marriage();
     }
 }
-
-
-
