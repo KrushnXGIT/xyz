@@ -1,27 +1,30 @@
-//String SCP HEAP , OBJECT->STRING STRINGBUFFER STRINGBUILDER
+//METHOD OVERLOADING
 
-
-class Call{
-    public void m1(String s){
-        System.out.println("String versioned");
-    }
-    public void m1(StringBuffer s){
-        System.out.println("StringBuffer versioned");
-    }
-    public void m2(int i){
-        System.out.println("Gen Method");
-    }
-    public void m2(int ...i){
-        System.out.println("VAR-ARG MEHTOD");
-    }
-    public static void main(String[] args) {
-        Call c = new Call();
-        c.m1("Pratap");
-        c.m1(new StringBuffer("KDK"));
-        c.m2();
-        c.m2(10,20);
-    }
+class Animal{
 
 }
+class Monkey extends Animal{
+
+}
+class Test {
+    public void m1(Animal a){
+        System.out.println("animal");
+    }
+
+    public void m1(Monkey m){
+        System.out.println("monkey");
+    }
+
+    public static void main(String[] args) {
+        Test t = new Test();
+        Animal a = new Animal();
+        t.m1(a);
+        Monkey m = new Monkey();
+        t.m1(m);
+        Animal a1 = new Monkey();
+        t.m1(a1);
+    }
+}
+
 
 
