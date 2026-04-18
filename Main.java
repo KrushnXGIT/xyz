@@ -1,16 +1,28 @@
 //Collection FRAMEWORKS
-//Vector
+//Stack
 
-import java.util.Vector;
 
-class call{
+import java.util.Iterator;
+import java.util.Stack;
+
+class call {
     public static void main(String[] args) {
-        Vector v = new Vector();
-        v.add("HELLO");
-        v.add(10);
-        v.add(23.23);
-        v.add(23.43f);
-        System.out.println(v);
+        Stack s = new Stack();
+        s.push("Hllo");
+        s.push("JiraMasala");
+        s.push("Krushna");
+        System.out.println(s.peek());
+        System.out.println(s);
+        for(int i=0;i<s.size();i++){
+            System.out.println(s.get(i));
+        }
+        for(Object o:s){
+            System.out.println(o);
+        }
+        Iterator it = s.iterator();
+        while(it.hasNext()){
+            System.out.println(it.next());
+        }
 
     }
 }
