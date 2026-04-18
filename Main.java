@@ -1,31 +1,31 @@
 //Collection FRAMEWORKS
-//ArrayList
+//LinkedList
 
-import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 
 class call{
     public static void main(String[] args) {
-        ArrayList al = new ArrayList();//<> not used here
-        al.add("Krushna");
-        al.add("Krushna");
-        al.add(10);
-        al.add(20.50);
-        al.add(20.3f);
-        al.add(null);
-        System.out.println(al);
-        System.out.println("Normal Looping");
-        for(int i=0;i<al.size();i++){
-            System.out.println(al.get(i));
+        LinkedList ll = new LinkedList();
+        ll.add("Krushna");
+        ll.add(10);
+        ll.add(13.23);
+        ll.add(13.24f);
+        ll.add(null);
+        System.out.println(ll);
+
+        //with looping
+        for(int i=0;i<ll.size();i++){
+            System.out.println(ll.get(i));
         }
-        System.out.println("FOR--EACH");
-        for(Object o:al){
+        //with for each
+        for(Object o:ll){
             System.out.println(o);
         }
-        System.out.println("Iterator");
-        Iterator<Object> newIt = al.iterator();
-        while(newIt.hasNext()){
-            System.out.println(newIt.next());
+        //with iterator
+        Iterator<Object> it = ll.iterator();
+        while(it.hasNext()){
+            System.out.println(it.next());
         }
     }
 }
