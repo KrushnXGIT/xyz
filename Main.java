@@ -1,27 +1,25 @@
-//Overriding
-class Parent{
-    public void property(){
-        System.out.println("Property");
-    }
-    public void marriage(){
-        System.out.println("Priyanka");
-    }
-}
+//write a java prohgramm to count uppercase and lower case letter from given string
 
-class MyChoice extends Parent{
-    //Simple Overriding
-    public void marriage(){
-        System.out.println("Katrina");
-    }
-}
 
-class Main{
-    public static void main(String[] args) {
-        Parent p = new Parent();
-        p.marriage();
-        MyChoice m = new MyChoice();
-        m.marriage();
-        Parent p1 = new MyChoice();
-        p1.marriage();
+
+class counter{
+    public void count(String s){
+        int countlo=0;
+        int countup=0;
+        for(int i=0;i<s.length();i++){
+            Character ch = s.charAt(i);
+            if(Character.isLowerCase(ch)){
+                countlo++;
+            }
+            if(Character.isUpperCase(ch)){
+                countup++;
+            }
+        }
+        System.out.println(countlo);
+        System.out.println(countup);
+    }
+    public static void main(String[] args){
+        counter c = new counter();
+        c.count("JSKjdjks");
     }
 }
