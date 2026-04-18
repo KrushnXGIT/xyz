@@ -1,19 +1,16 @@
-//problem
+//Collection FRAMEWORKS
+//Vector
 
-
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.concurrent.LinkedBlockingDeque;
+import java.util.Vector;
 
 class call{
     public static void main(String[] args) {
-        LinkedList<String> ll1 = new LinkedList<String>(Arrays.asList("TIGER","CAT","DOG","HORSE"));
-        LinkedList<String> ll2 = new LinkedList<String>(Arrays.asList("CAT","HORSE","MONKEY","LION"));
+        Vector v = new Vector();
+        v.add("HELLO");
+        v.add(10);
+        v.add(23.23);
+        v.add(23.43f);
+        System.out.println(v);
 
-        System.out.println(ll1);
-        System.out.println(ll2);
-        ll1.removeAll(ll2); //<IMPORTANT>//
-        System.out.println(ll1);
-        System.out.println(ll2);
     }
 }
