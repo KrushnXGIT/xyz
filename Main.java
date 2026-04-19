@@ -1,24 +1,34 @@
-//JAVA--8--FEATURES
-//FEATURE-LAMBDA FUNCTION
+//program create one arraylist
+//add integers numbers in AL and sort using Lambda
 
-@FunctionalInterface
-interface addInt {
-    int sum(int a,int b);
+
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+
+interface calc{
+    void sortt(ArrayList<Integer> a);
 }
-
-interface String_{
-    int lenst(String s);
-}
-
 
 
 class call{
+//    public int compare(Integer o1,Integer o2){
+//        Integer a =(Integer) o1;
+//        Integer b =(Integer) o2;
+//        return a.compareTo(b);
+//    }
     public static void main(String[] args) {
-//        Runnable hello = () -> System.out.println("hello");
-//        System.out.println(hello); //outputs=> call$$Lambda$14/0x0000023047001200@e9e54c2
-        addInt add = (p,q)->p+q;
-        System.out.println(add.sum(10,12));
-        String_ fun = (s)->s.length();
-        System.out.println(fun.lenst("Krushna"));
+        ArrayList<Integer> a = new ArrayList<Integer>();
+        a.add(10);
+        a.add(1);
+        a.add(2);
+        a.add(11);
+        a.add(23);
+        System.out.println(a);
+        calc w = (a)-> Collections.sort(a);
+        System.out.println(a);
+
     }
 }
