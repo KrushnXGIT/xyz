@@ -1,17 +1,17 @@
-//JAVA--8--FEATURES
-//FEATURE-STREAM API
-
+//program use stream to sort even
+//used collectors
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
-
-class employees{
+class caller{
     public static void main(String[] args) {
-        List<String> list = new ArrayList(Arrays.asList("pratap","pratik","amol","harshad"));
-//        list.stream().filter(emp->emp.startsWith("p")).forEach(null);
-        list.stream().filter(emp->emp.startsWith("p")).forEach(System.out::println);//java8 ka hi feature //streaming hota hai sirf isse
-        //list change nahi hogi
-        //System.out.println(list);
+        List<Integer> list = new ArrayList(Arrays.asList(1,2,3,4,5,6,7));
+        System.out.println(list);
+        list.stream().filter(l->l%2==0).forEach(System.out::println);
+        List<Integer> ls = list.stream().filter(l->l%2==0).collect(Collectors.toList());
+        System.out.println(ls);
     }
 }
