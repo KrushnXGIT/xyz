@@ -1,34 +1,17 @@
-//program create one arraylist
-//add integers numbers in AL and sort using Lambda
-
-
+//JAVA--8--FEATURES
+//FEATURE-STREAM API
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-
-interface calc{
-    void sortt(ArrayList<Integer> a);
-}
+import java.util.Arrays;
+import java.util.List;
 
 
-class call{
-//    public int compare(Integer o1,Integer o2){
-//        Integer a =(Integer) o1;
-//        Integer b =(Integer) o2;
-//        return a.compareTo(b);
-//    }
+class employees{
     public static void main(String[] args) {
-        ArrayList<Integer> a = new ArrayList<Integer>();
-        a.add(10);
-        a.add(1);
-        a.add(2);
-        a.add(11);
-        a.add(23);
-        System.out.println(a);
-        calc w = (a)-> Collections.sort(a);
-        System.out.println(a);
-
+        List<String> list = new ArrayList(Arrays.asList("pratap","pratik","amol","harshad"));
+//        list.stream().filter(emp->emp.startsWith("p")).forEach(null);
+        list.stream().filter(emp->emp.startsWith("p")).forEach(System.out::println);//java8 ka hi feature //streaming hota hai sirf isse
+        //list change nahi hogi
+        //System.out.println(list);
     }
 }
