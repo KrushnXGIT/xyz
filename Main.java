@@ -1,4 +1,4 @@
-class normal extends Thread {
+class normal implements Runnable {
     /**
      *
      */
@@ -13,7 +13,7 @@ class normal extends Thread {
 
     public static void main(String[] args){
         normal n = new normal();
-        n.start();
+        n.run();
 
     }
 }
