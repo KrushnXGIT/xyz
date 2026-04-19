@@ -1,17 +1,11 @@
-//Collection FRAMEWORKS
-//TreeSet
-
-import java.util.TreeSet;
-
-class call{
-    public static void main(String[] args) {
-        TreeSet ts = new TreeSet();
-        ts.add("Hello");
-        ts.add("Jello");
-        ts.add("Command");
-        System.out.println(ts);
-        for(int i=0;i<ts.size();i++){
-            //System.out.println(ts.get(i));//not allowed;
+//program SOD
+import java.util.*;
+class Anagram{
+    static void anag(String s1,String s2){
+        if(s1.length()!=s2.length()){
+            System.out.println("not an anagram");
+        }else{
+            s1 = s1.sort()
         }
     }
 }
