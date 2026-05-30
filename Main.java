@@ -12,9 +12,16 @@ class caller{
                 s.add(bracks.charAt(i));
             }
             else{
-                s.pop();
+                char ch2 = (char) s.pop();
+                if((bracks.charAt(i)=='>' && ch2=='<') || (bracks.charAt(i)==')' && ch2=='(') || (bracks.charAt(i)==']' && ch2=='[') || (bracks.charAt(i)=='}' && ch2=='{')){
+                    continue;
+                }
+                else {
+                    System.out.println("Invalid");
+                }
             }
         }
+
 
         if(!s.empty()){
             System.out.println("Not balanced");
