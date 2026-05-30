@@ -1,33 +1,24 @@
+import java.io.PrintStream;
+import java.util.ArrayList;
 
-import java.util.Scanner;
-import java.util.Stack;
-
-class caller{
+class ShareMarket{
     public static void main(String[] args) {
-        Stack s = new Stack();
-        Scanner sc = new Scanner(System.in);
-        String bracks = new String(sc.nextLine());
-        for(int i=0;i<bracks.length();i++){
-            if(bracks.charAt(i)=='<' || bracks.charAt(i)=='(' || bracks.charAt(i)=='[' || bracks.charAt(i)=='{'){
-                s.add(bracks.charAt(i));
-            }
-            else{
-                char ch2 = (char) s.pop();
-                if((bracks.charAt(i)=='>' && ch2=='<') || (bracks.charAt(i)==')' && ch2=='(') || (bracks.charAt(i)==']' && ch2=='[') || (bracks.charAt(i)=='}' && ch2=='{')){
-                    continue;
-                }
-                else {//problem here
-                    System.out.println("Invalid");
-                }
+        int [] prices = new int[]{1000,600,2000,300,1200};
+        int amt =100000;
+        int shares=0;
+        int profit=0;
+        int I=0,J=0;
+        int profitMax=0;
+        for(int i=0;i<prices.length;i++){
+            shares = amt/prices[i];
+            for(int j=i;j<prices.length;j++){
+                profit = shares*(prices[j]-prices[i]);
+                if(profit)
+                profitMax = Math.max(profit,profitMax);
             }
         }
-
-
-        if(!s.empty()){
-            System.out.println("Not balanced");
-        }else{
-            System.out.println("Balanced");
-        }
-        System.out.println(s);
+        System.out.println(I);
+        System.out.println(J);
+        System.out.println(profitMax);
     }
 }
