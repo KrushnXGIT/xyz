@@ -20,12 +20,13 @@ class A implements Runnable{
 }
 
 class call{
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         A r = new A();
         Thread t= new Thread(r);
-        t.start();
+        t.run();
         for(int i=0;i<5;i++){
             System.out.println("hecko");
+            sleep(1000);
         }
     }
 }//
