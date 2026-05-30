@@ -1,32 +1,26 @@
-import java.lang.Thread.*;
 
-import static java.lang.Thread.sleep;
+import java.util.Scanner;
+import java.util.Stack;
 
-class A implements Runnable{
-    /**
-     *
-     */
-    @Override
-    public void run()  {
-        for(int i = 0;i<5;i++){
-            try {
-                sleep(1000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+class caller{
+    public static void main(String[] args) {
+        Stack s = new Stack();
+        Scanner sc = new Scanner(System.in);
+        String bracks = new String(sc.nextLine());
+        for(int i=0;i<bracks.length();i++){
+            if(bracks.charAt(i)=='<' || bracks.charAt(i)=='(' || bracks.charAt(i)=='[' || bracks.charAt(i)=='{'){
+                s.add(bracks.charAt(i));
             }
-            System.out.println("Hello");
+            else{
+                s.pop();
+            }
         }
+
+        if(!s.empty()){
+            System.out.println("Not balanced");
+        }else{
+            System.out.println("Balanced");
+        }
+        System.out.println(s);
     }
 }
-
-class call{
-    public static void main(String[] args) throws Exception {
-        A r = new A();
-        Thread t= new Thread(r);
-        t.run();
-        for(int i=0;i<5;i++){
-            System.out.println("hecko");
-            sleep(1000);
-        }
-    }
-}//
