@@ -1,5 +1,6 @@
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 class ShareMarket{
     public static void main(String[] args) {
@@ -17,6 +18,7 @@ class ShareMarket{
                 profitMax = Math.max(profit,profitMax);
             }
         }
+        HashMap
         System.out.println(I);
         System.out.println(J);
         System.out.println(profitMax);
